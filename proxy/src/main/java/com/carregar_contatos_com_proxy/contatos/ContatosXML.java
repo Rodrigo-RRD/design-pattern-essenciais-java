@@ -7,6 +7,7 @@ import java.util.Map;
 import com.carregar_contatos_com_proxy.model.Contato;
 import com.carregar_contatos_com_proxy.repository.Contatos;
 import com.thoughtworks.xstream.XStream;
+import com.thoughtworks.xstream.security.NoTypePermission;
 
 public class ContatosXML implements Contatos {
 
@@ -15,6 +16,14 @@ public class ContatosXML implements Contatos {
     @SuppressWarnings("unchecked")
     public ContatosXML(String... nomesArquivos) {
         XStream xstream = new XStream();
+        xstream.addPermission(NoTypePermission.NONE);
+        xstream.allowTypesByWildcard(new String[] {
+                "com.carregar_contatos_com_proxy.model.**",
+                "java.util.List",
+                "java.util.Map",
+                "java.util.Set"
+        });
+
         xstream.alias("contatos", List.class);
         xstream.alias("contato", Contato.class);
 
