@@ -8,7 +8,8 @@
 Um padrão de criação que fornece uma interface para criar famílias de objetos relacionados ou dependentes sem especificar suas classes concretas.
 
 Objetivo: Isolar a criação de objetos complexos que podem pertencer a diferentes famílias ou variar conforme o contexto.
-Exemplo de problema: Criar interfaces de UI específicas para diferentes sistemas operacionais (Windows, macOS, Linux).
+
+Exemplo: Criar interfaces de UI específicas para diferentes sistemas operacionais (Windows, macOS, Linux).
 
 ```java
 public interface GUIFactory {
@@ -26,7 +27,8 @@ public class WindowsFactory implements GUIFactory {
 Um padrão de criação que separa a construção de um objeto complexo da sua representação, permitindo criar diferentes representações do mesmo tipo.
 
 Objetivo: Facilitar a criação de objetos complexos passo a passo.
-Exemplo de problema: Criar um objeto House com partes opcionais como garagem, piscina, ou jardim.
+
+Exemplo: Criar um objeto House com partes opcionais como garagem, piscina, ou jardim.
 
 ```java
 public class HouseBuilder {
@@ -42,7 +44,8 @@ public class HouseBuilder {
 Um padrão estrutural que permite adicionar comportamentos a objetos dinamicamente sem alterar sua classe.
 
 Objetivo: Extender a funcionalidade de um objeto de forma flexível e reutilizável.
-Exemplo de problema: Adicionar diferentes tipos de bordas (vermelha, tracejada) a um componente de interface gráfica.
+
+Exemplo: Adicionar diferentes tipos de bordas (vermelha, tracejada) a um componente de interface gráfica.
 
 ```java
 public interface Shape { void draw(); }
@@ -62,7 +65,8 @@ public class RedBorderDecorator implements Shape {
 Um padrão de projeto que permite injetar dependências em um objeto em vez de criá-las diretamente.
 
 Objetivo: Reduzir o acoplamento e facilitar a testabilidade.
-Exemplo de problema: Substituir serviços em testes unitários (ex.: substituir um banco de dados real por um mock).
+
+Exemplo: Substituir serviços em testes unitários (ex.: substituir um banco de dados real por um mock).
 
 ```java
 public class UserService {
@@ -75,7 +79,8 @@ public class UserService {
 Um padrão de criação que define um método para criar objetos, permitindo que subclasses alterem o tipo de objeto que será criado.
 
 Objetivo: Delegar a responsabilidade de criação às subclasses.
-Exemplo de problema: Criar diferentes tipos de documentos como PDFs, Word, ou Excel.
+
+Exemplo: Criar diferentes tipos de documentos como PDFs, Word, ou Excel.
 
 ```java
 public abstract class DocumentFactory {
@@ -91,7 +96,8 @@ public class PdfFactory extends DocumentFactory {
 Um padrão comportamental que define uma relação de dependência entre objetos, permitindo que um objeto notifique outros automaticamente quando seu estado muda.
 
 Objetivo: Implementar comunicação eficiente entre objetos desacoplados.
-Exemplo de problema: Atualizar automaticamente interfaces gráficas quando dados de backend mudam.
+
+Exemplo: Atualizar automaticamente interfaces gráficas quando dados de backend mudam.
 
 ```java
 public interface Observer { void update(String message); }
@@ -112,7 +118,8 @@ public class NewsPublisher {
 Um padrão estrutural que fornece um substituto ou representante para outro objeto para controlar o acesso a ele.
 
 Objetivo: Adicionar uma camada de controle ou otimização para acessar recursos custosos.
-Exemplo de problema: Controlar acesso a um objeto remoto ou proteger um recurso sensível.
+
+Exemplo: Controlar acesso a um objeto remoto ou proteger um recurso sensível.
 
 ```java
 public interface Image { void display(); }
@@ -136,7 +143,8 @@ public class ProxyImage implements Image {
 Um padrão comportamental que permite definir uma família de algoritmos, encapsulá-los e torná-los intercambiáveis.
 
 Objetivo: Trocar algoritmos dinamicamente sem alterar o código cliente.
-Exemplo de problema: Implementar diferentes estratégias de cálculo de frete (por peso, por distância, etc.).
+
+Exemplo: Implementar diferentes estratégias de cálculo de frete (por peso, por distância, etc.).
 
 ```java
 public interface ShippingStrategy {
