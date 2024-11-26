@@ -1,0 +1,1 @@
+Cliente [nome=Rodrigo RRD, cpf=123.123.123-12] | CartaoCredito [numero=4444 4444 4444 4444, nome=Rodrigo, vencimento=2025-08, codigoSeguranca=123] | R$150.0
